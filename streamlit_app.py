@@ -4,7 +4,7 @@ from transformers import pipeline,AutoModelForCausalLM,AutoTokenizer
 
 model_check_point = 'gpt2'
 
-llm = TFAutoModelForCausalLM.from_pretrained(model_check_point)
+llm = AutoModelForCausalLM.from_pretrained(model_check_point)
 tokenizer = AutoTokenizer.from_pretrained(model_check_point) 
 pipe = pipeline(tokenizer=tokenizer,model=llm) 
 
